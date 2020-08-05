@@ -9,7 +9,7 @@ const statsD = new StatsD({
   maxBufferSize: 512,
 });
 
-function main(instanceId) {
+function main(instance) {
   const child = spawn('bash', ['-c', 'nvidia-smi stats -d gpuUtil,memUtil']);
   readline.createInterface({ input: child.stdout }).on('line', (line) => {
     if (!line || line === '') return;
