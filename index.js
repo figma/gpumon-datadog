@@ -4,7 +4,7 @@ const readline = require('readline');
 const { StatsD } = require('hot-shots');
 
 const statsD = new StatsD({
-  prefix: 'pixie_worker.container_instance.gpu.',
+  prefix: 'aws.ecs.ec2.container_instance.gpu.',
   cacheDns: true,
   maxBufferSize: 512,
 });
